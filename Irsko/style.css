@@ -1,0 +1,237 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #2a6e3f; /* Irish green */
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('header.png');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid #1e5430; /* Darker green border */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+/* Enhanced Navigation Styling */
+nav {
+    background-color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+nav .container {
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #2a6e3f;
+    color: white;
+}
+
+/* Add underline effect on hover */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Active state for navigation */
+nav a.active {
+    background-color: #2a6e3f;
+    color: white;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+/* Styling for details/summary elements */
+details {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border-left: 3px solid #2a6e3f;
+    transition: all 0.3s ease;
+}
+
+details[open] {
+    background-color: #edf7ed;
+    padding-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+summary {
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    outline: none;
+}
+
+summary::marker {
+    color: #2a6e3f;
+}
+
+summary::-webkit-details-marker {
+    color: #2a6e3f;
+}
+
+summary:hover {
+    color: #2a6e3f;
+}
+
+details > *:not(summary) {
+    margin-left: 1.5rem;
+    padding-top: 0.5rem;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+a.card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+a.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(42, 110, 63, 0.2);
+    background-color: #f9fff9;
+    color: #2a6e3f;
+}
+
+/* Navigation links at bottom of pages */
+.navigation-links a.card {
+    border-left: 3px solid transparent;
+    font-weight: 500;
+}
+
+.navigation-links a.card:hover {
+    border-left: 3px solid #2a6e3f;
+}
+
+.day-header {
+    background-color: #f0f7f0;
+    padding: 0.5rem 1rem;
+    border-left: 5px solid #2a6e3f;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.day-header:hover {
+    transform: scale(1.02);
+    background-color: #e0f0e0;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.activity {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.activity:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.time {
+    font-weight: bold;
+    color: #2a6e3f;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin: 2rem 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 90%;
+    }
+}
