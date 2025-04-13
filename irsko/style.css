@@ -235,3 +235,18 @@ footer {
         width: 90%;
     }
 }
+
+#map {
+    height: 600px;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.route-info {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}

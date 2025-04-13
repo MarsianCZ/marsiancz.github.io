@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa | Výlet do Irska</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- OpenStreetMap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mapa</h1>
+            <p>Objevování Smaragdového ostrova – Květen 2025</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <a href="index.html">Hlavní stránka</a>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <section id="map-section" class="card">
+            <h2>Mapa cesty po Irsku</h2>
+            <p>Interaktivní mapa zobrazující hlavní místa a trasu naší cesty po Irsku.</p>
+            
+            <div id="map"></div>
+            
+            <div class="route-info">
+                <h3>Informace o trase</h3>
+                <p>Celková vzdálenost: přibližně 1800 km</p>
+                <p>Výchozí bod: Dublin Airport</p>
+                <p>Cílový bod: Dublin Airport</p>
+                <p>Doba trvání: 11 dní</p>
+                <p>Typ cesty: Okruh</p>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MarsianCZ | Poslední aktualizace: April 13, 2025</p>
+        </div>
+    </footer>
+    
+    <!-- OpenStreetMap JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <!-- Custom JavaScript -->
+    <script src="map.js"></script>
+</body>
+</html>
